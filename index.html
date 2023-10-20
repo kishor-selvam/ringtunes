@@ -5,10 +5,235 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ringtunes - Download Your Favorite Ringtones in Seconds</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="shortcut icon" href="./assets/images/favi.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favi.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
-    
+    <!-- Header -->
+    <header
+      class="bg-gray-900 text-white px-8 md:px-20 py-5 bg-[url(https://img.freepik.com/free-vector/glowing-musical-pentagram-background-with-sound-notes_1017-31220.jpg)]"
+    >
+      <!-- Title -->
+      <div class="flex items-center justify-between">
+        <h4 class="text-xl font-bold">RingTunes</h4>
+        <a href="https://github.com/kishor-selvam/ringtunes" target="_blank"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            class="fill-current hover:text-cyan-400"
+          >
+            <path
+              fill="currentColor"
+              d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"
+            />
+          </svg>
+        </a>
+      </div>
+      <!-- Banner -->
+      <div class="text-center py-14 space-y-4">
+        <h3 class="text-3xl">
+          Download <span class="text-cyan-400">RingTunes</span> <br />
+          in Seconds...
+        </h3>
+        <div class="relative max-w-lg mx-auto">
+          <input
+            type="text"
+            placeholder="Search by name,movies,etc,..."
+            class="pr-4 py-2 rounded w-full pl-10 outline-none text-black"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            class="absolute top-1 left-1 fill-current text-gray-800 p-0.5"
+          >
+            <path
+              fill="currentColor"
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main
+      class="mx-5 my-5 space-y-4 sm:space-y-0 flex flex-col sm:flex-row sm:space-x-5"
+    >
+      <!-- Filters -->
+      <div class="bg-gray-300 h-fit p-5 rounded shadow space-y-4 max-w-sm">
+        <h4 class="font-semibold">Filters</h4>
+        <div class="space-y-4">
+          <select
+            name="languages"
+            id="languages"
+            class="rounded px-2 py-1 w-full outline-none"
+          >
+            <option value="">Select Language</option>
+            <option value="english">English</option>
+            <option value="tamil">Tamil</option>
+            <option value="malayalam">Malayalam</option>
+            <option value="kannada">Kannada</option>
+          </select>
+
+          <select
+            name="artist"
+            id="artist"
+            class="rounded px-2 py-1 w-full outline-none"
+          >
+            <option value="">Select Artist</option>
+            <option value="yuvan">Yuvan</option>
+            <option value="ilayaraja">Ilaya Raja</option>
+            <option value="ar-rahman">Ar Rahman</option>
+            <option value="anirudh">Anirudh</option>
+          </select>
+
+          <input
+            type="text"
+            placeholder="Movie Title"
+            class="rounded px-2 py-1 w-full outline-none"
+          />
+
+          <button
+            class="rounded px-4 py-2 w-full bg-cyan-500 text-white font-semibold"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+      <!-- Contents -->
+      <div class="my-4 space-y-4">
+        <!-- Categories -->
+        <section>
+          <h4 class="font-semibold">Categories</h4>
+          <div class="flex items-center space-x-5 mt-3">
+            <div
+              class="bg-gray-300 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded"
+            ></div>
+            <div
+              class="bg-gray-300 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded"
+            ></div>
+            <div
+              class="bg-gray-300 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded"
+            ></div>
+            <div
+              class="bg-gray-300 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded"
+            ></div>
+          </div>
+        </section>
+        <!-- stars -->
+        <section>
+          <h4 class="font-semibold">Browse by stars</h4>
+          <div class="flex items-center space-x-5 mt-3">
+            <div
+              class="bg-gray-300 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded"
+            ></div>
+            <div
+              class="bg-gray-300 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded"
+            ></div>
+            <div
+              class="bg-gray-300 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded"
+            ></div>
+            <div
+              class="bg-gray-300 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded"
+            ></div>
+          </div>
+        </section>
+        <!-- Browse by languages -->
+        <section>
+          <h4 class="font-semibold">Browse by languages</h4>
+          <div class="flex items-center space-x-5 mt-3">
+            <div
+              class="bg-gray-300 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded"
+            ></div>
+            <div
+              class="bg-gray-300 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded"
+            ></div>
+            <div
+              class="bg-gray-300 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded"
+            ></div>
+            <div
+              class="bg-gray-300 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded"
+            ></div>
+          </div>
+        </section>
+
+        <!-- Popular Ringtones -->
+        <section class="space-y-3">
+          <h4 class="font-semibold">Popular Ringtones</h4>
+          <div class="flex flex-col space-y-4 bg-gray-300 rounded px-5 py-5">
+            <div class="flex space-x-4 justify-between">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5l-6 4.5z"
+                  />
+                </svg>
+              </div>
+              <div class="space-y-3">
+                <div>
+                  <h4 class="text-xl font-semibold">Leo Ringtone(BadAss)</h4>
+                  <p class="text-sm text-gray-500">Uploaded By Kishor</p>
+                  <p class="text-sm">Music: <span>Anirudh</span></p>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-xs px-1 py-0.5 bg-red-300 rounded items-center">25 SEC</span>
+                  <span class="text-xs px-1 py-0.5 bg-red-300 rounded items-center">1.5 MB</span>
+                  <span class="text-xs px-1 py-0.5  bg-red-300 rounded flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="m12 16l-5-5l1.4-1.45l2.6 2.6V4h2v8.15l2.6-2.6L17 11l-5 5Zm-6 4q-.825 0-1.413-.588T4 18v-3h2v3h12v-3h2v3q0 .825-.588 1.413T18 20H6Z"
+                      />
+                    </svg>
+                    250+
+                  </span>
+                </div>
+              </div>
+              
+              <div>
+                <p class="bg-emerald-500 rounded px-2">Tamil</p>
+              </div>
+              
+            </div>
+
+            <button
+              class="w-full flex items-center bg-cyan-400 rounded justify-center py-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m12 16l-5-5l1.4-1.45l2.6 2.6V4h2v8.15l2.6-2.6L17 11l-5 5Zm-6 4q-.825 0-1.413-.588T4 18v-3h2v3h12v-3h2v3q0 .825-.588 1.413T18 20H6Z"
+                />
+              </svg>
+              Download Now
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
